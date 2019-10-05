@@ -1,0 +1,45 @@
+Dans cette séance on va se familiariser avec le logiciel LOTrec, Apprendre à formuler un problème logique et utiliser le logiciel pour le résoudre et
+en fin manipuler les modèles et les pre-modèles.
+
+
+Partie 1.2 :
+1) insatisfiable
+2) valide car F2 satisfiable, en effet, en déroulant l'algorithme des tableaux on trouve une feuille ouverte et non F2 insatisfiable
+3) insatisfiable, car toute les feuilles ramènent à un clash
+4) satisfiable, il y a au moins une feuille ouverte à la fin. Elle n'est pas valide car sa négation est satisfiable.
+5) satisfiable, il y a au moins une feuille ouverte à la fin. Elle n'est pas valide car sa négation est satisfiable.
+6) valide car on trouve des feuilles ouvertes et sa négation est insatisfiable.
+
+Partie 1.3
+
+Soient : fièvre : F
+Grippe: G
+Tamiflu : TF
+Tousse : T
+Température sup à 38 : S
+Bronchite : B
+
+Les connaissances a, b , c et d peuvent être modélisés par :
+F1: F <-> S
+F2: G ->TF
+F3 : (F & T) -> G
+F4: T & S
+
+Si les quatre formules sont vraies au même temps alors le patient doit prendre du tamiflu, ce qui peut être modélisé par une implication, et on obtient la formule :
+ H : (F <-> S) & (G ->TF) & ((F & T) -> G) & (T & S) -> TF
+Déterminer si il faut prendre du tamiflu revient à montrer que H est valide; Ce qu'on a pu vérifier avec Lotrec.
+
+3) L'introduction de l'incertitude entraîne un changement dans la formule F3 :
+F5 : (F& T) -> (G V B)
+Pour répondre à la question il faut vérifier si la formule H' est toujours valide tel que :
+H': (F <-> S) & (G ->TF) & ((F & T) -> (G V B)) & (T & S) -> TF
+En utilisant LOTrec on trouve que H' est satisfiable et (Not H') est aussi satisfiable alors H' n'est pas valide et donc la prise du tamiflu n'est plus toujours indiquée.
+
+Partie 1.4 :
+
+1- Oui on peut. Prenant la formule F : a or (a & b) or (a & b & c),
+cette formule donne 3 pré-modèles : P1= {a}, P2 = {a, b}, P3 ={a, b,c} on aura : M(P3) c M(P2) c M(P1)
+
+2-Oui il y a une relation entre le nombre de pré-modèles et les modèles, en effet on peut calculer le nombre des modèles à partir du nombre des variables qui n'apparaissent pas dans le pré-modèles.
+ Par exemple si on a 3 variables et un pré-modèle P ne contient que deux variables alors :  Card(M(P))= 2^1
+Conclusion : Nb_modèles= Som (2^vi) tq vi: nombre de variables qui n’apparaissent pas dans le pré-modèles i.

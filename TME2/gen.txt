@@ -1,0 +1,15 @@
+charles  ruth
+  │p      │m
+pepin    berthe
+  │ └────┐│   └─┐
+  │   ┌──┼┘     │
+  │p  │m └───┐p │m
+charlemagne  gisele
+               │m
+             bertrand   cisca
+              │ └────┐  │   │
+              │   ┌──┼──┘   │
+              │p  │m └───┐p │m
+             dorian      alex
+
+└│─┐┌┼┘
