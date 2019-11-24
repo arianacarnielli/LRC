@@ -1,0 +1,17 @@
+add w1 isItTrue B
+add w1 isItTrue A
+add w1 isItTrue pos A
+add w1 isItTrue nec B
+add w4 isItTrue and nec B nec A
+add w4 isItTrue and pos B pos A
+add w4 isItTrue or nec B nec A
+add w1 isItTrue nec pos B
+add w3 isItTrue pos pos pos A
+add w3 isItTrue nec nec nec A
+add w2 isItTrue pos or not A nec B
+
+
+bottom down
+bottom up
+
+

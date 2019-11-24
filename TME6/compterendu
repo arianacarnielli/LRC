@@ -1,0 +1,43 @@
+1) imp nec P not nec not nec P 
+toutes les feuilles sont ouvertes donc la formule est satisfiable
+
+On regarde si la formule est valide en vérifiant la négation de la formule
+
+not imp nec P not nec not nec P 
+	toutes les feuilles sont fermées donc la formule est valide
+2)
+and nec P nec nec not P
+	toutes les feuilles sont fermées donc la formule est insatisfiable
+
+3)imp nec P nec nec not P
+la formule est satisfiable car les feuilles sont ouvertes
+
+not imp nec P nec nec not P
+
+en regardant la négation de la formule on voit que toutes les feuilles sont ouvertes
+donc la formule est que satisfiable.
+
+Exercice 2
+
+not and imp not nec P nec not nec P imp nec not nec P not nec P
+Pour vérifier que la négation de
+
+
+pourquoi il acceptable pour le systeme S5 et pas pour le système S4 ?
+
+Lorsqu'on se place dans le syteme S4 et qu'on veut montrer que la formule est valide.
+On passe par la négation et on remarque qu'un des premodèles est réalisable donc
+que la formule n'est pas valide.
+
+On sait que la formule est valide en S5 (KT45) car il y a une règle en plus qui correspond
+à l'euclidiannité. Donc essayons de prouver que si on avait rajouter la règle d'euclidiannité 
+en S4 la formule aurait été valide.
+
+En effet, nous avons un monde w1 qui pointe vers 2 mondes w2 et w3. Donc la règle d'euclidiannité
+donnerait un lien entre w2 et w3 (qui n'existe pas dans S4). Dans le monde w2, il y a []P et dans le
+monde w3 il y a ~P donc avec ce nouveau lien rajouté on obtiendrait un P dans w3 donc il y a 
+une contradiction. Tous les prémodèles générés par la méthode des tableaux pour la négation de la formule sont insatifiables donc la formule devient valide.
+
+Exercice 3
+
+
