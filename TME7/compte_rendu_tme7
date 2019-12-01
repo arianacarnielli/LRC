@@ -1,0 +1,141 @@
+Exercice 3
+
+Question 1
+
+Les trois joueurs sont notés J1, J2, J3. Le premier joueur change à chaque partie, mais on renumérote les joueurs pour qu'il soit toujours J1 et que le deuxième à joueur soit toujours J2. Les cartes possibles sont A et 8, les paires possibles sont donc AA, A8 et 88.
+
+Partie 1 :
+Donne :
+	J1 : A8
+	J2 : A8
+	J3 : A8
+Annonces :
+	J1 : Je ne sais pas quelles sont mes cartes.
+	J2 : Je ne sais pas quelles sont mes cartes.
+	J3 : Je ne sais pas quelles sont mes cartes.
+	J1 : Je ne sais pas quelles sont mes cartes.
+	J2 : Je ne sais pas quelles sont mes cartes.
+	J3 : Je ne sais pas quelles sont mes cartes.
+Terminée en échec
+	
+Partie 2 :
+Donne :
+	J1 : 88
+	J2 : A8
+	J3 : A8
+Annonces :
+	J1 : Je ne sais pas quelles sont mes cartes.
+	J2 : Je ne sais pas quelles sont mes cartes.
+	J3 : Je ne sais pas quelles sont mes cartes.
+	J1 : Je ne sais pas quelles sont mes cartes.
+	J2 : Je sais que mes cartes sont A8.
+	
+Partie 3 :
+Donne :
+	J1 : 88
+	J2 : AA
+	J3 : AA
+Annonces :
+	J1 : Je sais que mes cartes sont 88.
+
+Partie 4 :
+Donne :
+	J1 : AA
+	J2 : A8
+	J3 : 88
+Annonces :
+	J1 : Je ne sais pas quelles sont mes cartes.
+	J2 : Je ne sais pas quelles sont mes cartes.
+	J3 : Je ne sais pas quelles sont mes cartes.
+	J1 : Je ne sais pas quelles sont mes cartes.
+	J2 : Je sais que mes cartes sont A8.
+
+Partie 5 :
+Donne :
+	J1 : A8
+	J2 : 88
+	J3 : AA
+Annonces :
+	J1 : Je ne sais pas quelles sont mes cartes.
+	J2 : Je ne sais pas quelles sont mes cartes.
+	J3 : Je ne sais pas quelles sont mes cartes.
+	J1 : Je sais que mes cartes sont A8.
+
+Partie 6 :
+Donne :
+	J1 : 88
+	J2 : AA
+	J3 : A8
+Annonces :
+	J1 : Je ne sais pas quelles sont mes cartes.
+	J2 : Je ne sais pas quelles sont mes cartes.
+	J3 : Je sais que mes cartes sont A8.
+
+Partie 7 :
+Donne :
+	J1 : A8
+	J2 : AA
+	J3 : A8
+Annonces :
+	J1 : Je ne sais pas quelles sont mes cartes.
+	J2 : Je ne sais pas quelles sont mes cartes.
+	J3 : Je ne sais pas quelles sont mes cartes.
+	J1 : Je sais que mes cartes sont A8.
+	
+Partie 8 :
+Donne :
+	J1 : 88
+	J2 : AA
+	J3 : 88
+Annonces :
+	J1 : Je ne sais pas quelles sont mes cartes.
+	J2 : Je sais que mes cartes sont AA.
+
+Partie 9 :
+Donne :
+	J1 : A8
+	J2 : 88
+	J3 : A8
+Annonces :
+	J1 : Je ne sais pas quelles sont mes cartes.
+	J2 : Je ne sais pas quelles sont mes cartes.
+	J3 : Je ne sais pas quelles sont mes cartes.
+	J1 : Je sais que mes cartes sont A8.
+
+Partie 10 :
+Donne :
+	J1 : AA
+	J2 : 88
+	J3 : A8
+Annonces :
+	J1 : Je ne sais pas quelles sont mes cartes.
+	J2 : Je ne sais pas quelles sont mes cartes.
+	J3 : Je sais que mes cartes sont A8.
+
+Après l'échec de la première partie, nous avons analysé son résultat et, suite à cette analyse, nous avons préparé trois feuilles avec les 19 mondes possibles : une pour le joueur 1 avec ses propres relations entre les mondes, une autre pour le joueur 2 avec ses relations, et une troisième pour le joueur 3. Les trois joueurs ont suivi l'évolution du jeu à l'aide des feuilles pour leur aider à ne pas faire des déclarations fausses.
+
+Question 2
+
+On a retracé la première partie en utilisant des feuilles avec les mondes et les relations de chaque joueur pour comprendre les connaissances à chaque étape et on est arrivé à la conclusion que le joueur 2 aurait pu savoir, à la deuxième fois qu'il parlait, qu'il avait A8. En effet, le joueur 2 confond le vrai monde (A8, A8, A8) avec (A8, AA, A8) et (A8, 88, A8) au début.
+1ère étape : le joueur 1 annonce qu'il ne connait pas ses cartes car il confond les mondes (A8, A8, A8), (AA, A8, A8) et (88, A8, A8). Les mondes (AA, 88, 88) et (88, AA, AA) ne sont donc pas possibles.
+2ème étape : le joueur 2 annonce qu'il ne connait pas ses cartes car il confond les mondes (A8, A8, A8), (A8, AA, A8) et (A8, 88, A8). Les mondes (88, AA, 88) et (AA, 88, AA) ne sont donc pas possibles.
+3ème étape : le joueur 3 annonce qu'il ne connait pas ses cartes car il confond les mondes (A8, A8, A8), (A8, A8, AA) et (A8, A8, 88). Les mondes (88, 88, AA) et (AA, AA, 88) ne sont donc pas possibles, ainsi que (88, AA, A8) et (AA, 88, A8), car, si on était dans ces mondes, le joueur 3 le saurait à ce stade.
+4ème étape : le joueur 1 annonce qu'il ne connait pas ses cartes car il confond les mondes (A8, A8, A8), (AA, A8, A8) et (88, A8, A8). Les mondes (A8, AA, A8), (A8, AA, 88), (A8, 88, AA) et (A8, 88, A8) ne sont donc pas possibles.
+5ème étape : comme les mondes (A8, AA, A8) et (A8, 88, A8) ne sont plus possibles, alors le joueur 2 sait qu'on est dans le monde (A8, A8, A8) et alors qu'il a les cartes A8.
+
+Question 3
+
+Pour aider à suivre le déroulement des parties, outre les feuilles déjà mentionnées on a écrit un code Haskell (fichier tme7-ashuits.hs) qui implémente ce modèle. Nous avons suivi le déroulement de toutes les parties à l'aide de ce code et des feuilles, et on a pu constater que, outre l'erreur à la première partie, les autres se sont déroulées correctement. Voici comme exemple le déroulement de la partie 6 :
+Confusions au début :
+	J1 : (88, AA, A8), (A8, AA, A8)
+	J2 : (88, AA, A8), (88, A8, A8)
+	J3 : (88, AA, A8), (88, AA, AA), (88, AA, 88)
+1ère étape : le joueur 1 annonce qu'il ne connait pas ses cartes. Les mondes (AA, 88, 88) et (88, AA, AA) ne sont donc pas possibles. Confusions :
+	J1 : (88, AA, A8), (A8, AA, A8)
+	J2 : (88, AA, A8), (88, A8, A8)
+	J3 : (88, AA, A8), (88, AA, 88)
+2ème étape : le joueur 2 annonce qu'il ne connait pas ses cartes. Les mondes (88, AA, 88) et (AA, 88, AA) ne sont donc pas possibles. Confusions :
+	J1 : (88, AA, A8), (A8, AA, A8)
+	J2 : (88, AA, A8), (88, A8, A8)
+	J3 : (88, AA, A8)
+3ème étape : le joueur 3 connait ses cartes.
