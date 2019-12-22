@@ -1,0 +1,70 @@
+Exercice 1 
+
+1. 
+P1 va remplir P2 (jusqu'à atteindre 3K) en vidant P3.
+P2 va remplir P3 (jusqu'à atteindre 2K) en vidant P1.
+P3 va remplir P1 (jusqu'à atteindre 6K) en vidant P2.
+
+2.
+borné : oui il est même 6K-borné
+vivant : oui, car pour en partant de n'importe quel marquage on peut franchir toutes les transitions.
+réversible : oui, car il y a possibilité de revenir au marquage initial M0.
+
+3.
+bounded = Y (6K-borned)
+live = Y
+reversible = Y
+
+4.
+---
+
+5.
+On remarque que le graphe des marquages accessibles est cyclique. On voit bien la réversibilité car on 
+revient au marquage initial M0(6,0,2).
+
+Exercice 2
+1.
+---
+2.
+---
+3.
+---
+4.
+borné : oui, 1-borné
+vivant : non
+reversible : non, on ne pas revenir au marquage initiale M0
+sans-blocage : non, car état puit
+transition vivante : Aucune transition vivante car présence d'un état puit 
+marquage puit : M(0,1,0,0)
+
+5.
+Quasi-vivant : Il faut regarder dans le graphe de marquages que toutes les transitions sont présentes.
+
+Exercice 3 
+1.
+--- 
+
+2.
+réseau non borné : M0(0,0,1,1)
+- transitions vivantes : t0,t1,t2,t3 
+réseau borné avec blocage : M0(1,0,0,0)
+- transitions vivantes : aucune
+réseau borné et sans blocage et réversible, mais ni vivant, ni quasi-vivant : M0(0,0,1,0) ou M0(0,0,0,1)
+- transitions vivantes : t3,t4
+réseau borné et sans blocage et non réversible, ni vivant ou quasi-vivant : M0(0,1,0,0)
+- transitions vivantes : t3,t4
+
+3.
+réseau borné, quasi vivant mais avec blocage : On modifie le poids de l'arc entrant vers t0 à 3 et le poids de l'arc sortant de t0 à 1. On prend comme marquage initial M0(3,0,0,0).
+réseau borné, quasi vivant, sans blocage et non réversible ni vivant : On modifie l'arc entrant vers t0 à 3. On prend comme marquage initial M0(3,0,0,0). 
+réseau borné, quasi vivant, sans blocage et réversible, mais pas vivant : Impossible. Si toutes les transitions sont quasi-vivantes on passe au moins une fois par toutes les transitions. Si en plus le réseau est réversible, on repasse par l'état initial donc on va repasser plusieurs fois par toutes les transitions.
+réseau borné, vivant et réversible : On modifie le poids de l'arc sortant de t0 à 1. On prend comme marquage initial M0(2,0,0,0). Le poids de l'arc entrant doit être égale à la somme des arcs sortants de la transition t0 (2 = 1 + 1).
+
+Exercice 4
+
+
+
+
+
+
+Exercice 5 

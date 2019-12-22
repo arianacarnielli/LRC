@@ -1,0 +1,12 @@
+s 30.0 150.0 0 c {p1 p3} ne
+s 295.0 150.0 3 c p1 ne
+s 120.0 50.0 1 c {p1 p2} ne
+s 185.0 150.0 2 c p0 ne
+e 2 0 t2 n
+e 2 3 t1 n
+e 1 0 t3 n
+e 1 2 t0 n
+e 0 1 t4 n
+h exo2_graph
+
+
